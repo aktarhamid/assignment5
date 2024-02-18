@@ -7,6 +7,7 @@
     <!-- TailwindCss and DeisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
      <!-- navbar section start here -->
@@ -67,49 +68,49 @@
             <!-- Seat row A -->
             <div class="mt-10 flex space-x-8">
               <p class="text-xl h-8 h-16 m-2 flex justify-center items-center">A</p>
-             <button class="btn w-32 bg-slate-200">A1</button>
-             <button class="btn w-32 bg-slate-200">A2</button>
-             <button class="btn w-32 bg-slate-200">A3</button>
-             <button class="btn w-32 bg-slate-200">A4</button>
+             <button class="btn w-32 bg-slate-200 add-btn">A1</button>
+             <button class="btn w-32 bg-slate-200 add-btn">A2</button>
+             <button class="btn w-32 bg-slate-200 add-btn">A3</button>
+             <button class="btn w-32 bg-slate-200 add-btn">A4</button>
             </div>
             <!-- Seat row B -->
             <div class="mt-6 flex space-x-8">
               <p class="text-xl h-8 h-16 m-2 flex justify-center items-center">B</p>
-             <button class="btn w-32 bg-slate-200">B1</button>
-             <button class="btn w-32 bg-slate-200">B2</button>
-             <button class="btn w-32 bg-slate-200">B3</button>
-             <button class="btn w-32 bg-slate-200">B4</button>
+             <button class="btn w-32 bg-slate-200 add-btn">B1</button>
+             <button class="btn w-32 bg-slate-200 add-btn">B2</button>
+             <button class="btn w-32 bg-slate-200 add-btn">B3</button>
+             <button class="btn w-32 bg-slate-200 add-btn">B4</button>
             </div>
             <!-- Seat row C -->
             <div class="mt-6 flex space-x-8">
               <p class="text-xl h-8 h-16 m-2 flex justify-center items-center">C</p>
-             <button class="btn w-32 bg-slate-200">C1</button>
-             <button class="btn w-32 bg-slate-200">C2</button>
-             <button class="btn w-32 bg-slate-200">C3</button>
-             <button class="btn w-32 bg-slate-200">C4</button>
+             <button class="btn w-32 bg-slate-200 add-btn">C1</button>
+             <button class="btn w-32 bg-slate-200 add-btn">C2</button>
+             <button class="btn w-32 bg-slate-200 add-btn">C3</button>
+             <button class="btn w-32 bg-slate-200 add-btn">C4</button>
             </div>
             <!-- Seat row D -->
             <div class="mt-6 flex space-x-8">
               <p class="text-xl h-8 h-16 m-2 flex justify-center items-center">D</p>
-             <button class="btn w-32 bg-slate-200">D1</button>
-             <button class="btn w-32 bg-slate-200">D2</button>
-             <button class="btn w-32 bg-slate-200">D3</button>
-             <button class="btn w-32 bg-slate-200">D4</button>
+             <button class="btn w-32 bg-slate-200 add-btn">D1</button>
+             <button class="btn w-32 bg-slate-200 add-btn">D2</button>
+             <button class="btn w-32 bg-slate-200 add-btn">D3</button>
+             <button class="btn w-32 bg-slate-200 add-btn">D4</button>
             </div>
             <!-- Seat row E -->
             <div class="mt-6 flex space-x-8">
               <p class="text-xl h-8 h-16 m-2 flex justify-center items-center">E</p>
-             <button class="btn w-32 bg-slate-200">E1</button>
-             <button class="btn w-32 bg-slate-200">E2</button>
-             <button class="btn w-32 bg-slate-200">E3</button>
-             <button class="btn w-32 bg-slate-200">E4</button>
+             <button class="btn w-32 bg-slate-200 add-btn">E1</button>
+             <button class="btn w-32 bg-slate-200 add-btn">E2</button>
+             <button class="btn w-32 bg-slate-200 add-btn">E3</button>
+             <button class="btn w-32 bg-slate-200 add-btn">E4</button>
             </div>
             <div class="mt-6 flex space-x-8 mb-4">
               <p class="text-xl h-8 h-16 m-2 flex justify-center items-center">F</p>
-             <button class="btn w-32 bg-slate-200">F1</button>
-             <button class="btn w-32 bg-slate-200">F2</button>
-             <button class="btn w-32 bg-slate-200">F3</button>
-             <button class="btn w-32 bg-slate-200">F4</button>
+             <button class="btn w-32 bg-slate-200 add-btn">F1</button>
+             <button class="btn w-32 bg-slate-200 add-btn">F2</button>
+             <button class="btn w-32 bg-slate-200 add-btn">F3</button>
+             <button class="btn w-32 bg-slate-200 add-btn">F4</button>
             </div>
           </div>
           <div class="border-2 border-green-500 w-2/5">
@@ -118,23 +119,30 @@
             <div class="flex flex-col items-center">
               <div class="card w-96 bg-gray-100 shadow-xl">
                  <div class="flex justify-around border-dashed border-2 border-x p-2">
-                  <p>Seat <span class="text-green-500 text-lg font-semibold">0</span> </p>
+                  <p>Seat <span id="card-count" class="text-green-500 text-lg font-semibold">0</span> </p>
                   <p>Class</p>
                   <p>Price</p>
                  </div>
                  <div class="flex">
                  </div>
+                 <!-- Append Child -->
+                 <div class="m-4 pl-6">
+                  <ul id="Selected-place-container">
+      
+                  </ul>
+                 </div>
+                 <hr>
                  <div class="flex justify-around mt-4">
                   <p class="font-semibold">Total Price</p>
-                 <p class="font-semibold">BDT: <span>0</span></p>
+                 <p class="font-semibold">BDT: <span id="total-price">0</span></p>
                  </div>
                  <div class="flex space-x-1 mt-4">
                   <input type="text" placeholder="Have any copupon?" class="input input-bordered w-full max-w-xs" />
-                  <button class="btn bg-[#1DD100] text-white">Apply</button>
+                  <button class="btn bg-[rgb(29,209,0)] text-white">Apply</button>
                  </div>
                  <div class="flex justify-around font-semibold m-4">
                   <p>Grand Total</p>
-                  <p>BDT: <span>0</span></p>
+                  <p>BDT: <span id="grand-total">0</span></p>
                  </div>
               </div>
             </div>
