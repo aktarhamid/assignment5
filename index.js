@@ -73,13 +73,45 @@ for(const btn of allButton){
         //  console.log(input);
        if( convertedDiscount === 2200 && input === 'new15'){
         console.log('aktar hossen is a good student');
+            const count7 = 2200*0.15;
+            // console.log(count7)
+            const selectedContainer2 = document.getElementById('discounted-price');
+        //   console.log(selectedContainer2);
+         const li = document.createElement('li');
+         const p = document.createElement('p');
+            p.innerText = 'Discount';
+         const p2 = document.createElement('p');
+            p2.innerText = count7;
+            li.append(p);
+            li.append(p2);
+            selectedContainer2.append(li);
+           const afterDiscount  = count2 -count7;
+           setInnerText('grand-total', afterDiscount);
+        //    console.log(afterDiscount);
+        return;
        }
-       if( convertedDiscount === 2200 && input === 'couple 20'){
-        console.log('aktar hossen is a good student');
+       else if( convertedDiscount === 2200 && input === 'couple 20'){
+        const count8 = 2200*0.20;
+        // console.log(count8);
+         const selectedContainer2 = document.getElementById('discounted-price');
+        //   console.log(selectedContainer2);
+         const li = document.createElement('li');
+         const p = document.createElement('p');
+            p.innerText = 'Discount';
+         const p2 = document.createElement('p');
+            p2.innerText = count8;
+            li.append(p);
+            li.append(p2);
+            selectedContainer2.append(li);
+            const afterDiscount  = count2 - count8;
+           setInnerText('grand-total', afterDiscount);
+        //    console.log(afterDiscount);
+        return;
        }
 
        else{
-        console.log('aktar hossen is not a good student')
+        console.log('aktar hossen is not a good student');
+        console.log(count2);
        }
        
     })
