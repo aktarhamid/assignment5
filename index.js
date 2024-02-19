@@ -88,7 +88,8 @@ for(const btn of allButton){
            const afterDiscount  = count2 -count7;
            setInnerText('grand-total', afterDiscount);
         //    console.log(afterDiscount);
-        return;
+        
+    
        }
        else if( convertedDiscount === 2200 && input === 'couple 20'){
         const count8 = 2200*0.20;
@@ -116,5 +117,45 @@ for(const btn of allButton){
        
     })
 
-    // const input = document.getElementById('cupon-input-fild').value;
-    // console.log(input);
+    document.getElementById('btn-next').addEventListener('click', function(){
+         
+        add('display1')
+        remove('display2');
+    })
+    document.getElementById('btn-continue').addEventListener('click', function(){
+         
+        add('display2')
+        remove('display1');
+    })
+
+
+    function add(element){
+        const homeScreen = document.getElementById(element);
+        homeScreen.classList.add('hidden');
+    }
+    function remove(element){
+        const displaySection = document.getElementById(element);
+        displaySection.classList.remove('hidden');
+     }
+
+       
+    
+       
+    //  document.getElementsByClassName('input-name').addEventListener('keyup', function(e){
+    //     const text = e.target.value;
+    //     const deletElemnt = document.getElementById('btn-apply');
+    //     console.log(text)
+    // })
+
+    document.getElementById('input-name1').addEventListener('keyup',function(e){
+        const inputField1 = e.target.value;
+        console.log(inputField1);
+    })
+
+    //   const inputName1 = document.getElementById("input-name1").value;
+    //   const inputName2 = document.getElementById("input-name2").value;
+    //   const inputName3 = document.getElementById("input-name3").value;
+      
+    //  console.log(inputName1);
+    //  console.log(inputName2);
+    //  console.log(inputName3);

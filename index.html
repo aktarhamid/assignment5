@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="">
+  <div id="display1" class="">
      <!-- navbar section start here -->
      <section class="container">
         <nav class="max-w-6xl mx-auto my-8">
@@ -246,18 +246,18 @@
             <!--Card is end here -->
           <div class="m-6">
               <label for="text" class="font-semibold mt-4">Passenger Name*</label>
-              <input type="text" placeholder="Enter Passenger Name:" class="input input-bordered w-full max-w-xs mt-4" />
+              <input type="text" placeholder="Enter Passenger Name:" id="input-name1" class=" input input-bordered w-full max-w-xs mt-4" />
           </div>
           <div class="ml-6 flex flex-col ">
             <label class="font-semibold" for="number">Phone Number*</label>
-            <input type="text" placeholder="Enter Passenger Name:" class="input input-bordered w-full max-w-xs mt-4" />
+            <input type="text" placeholder="Enter Passenger Name:" id="input-name2" class=" input input-bordered w-full max-w-xs mt-4" />
           </div>
           <div class="m-6 flex flex-col ">
             <label class="font-semibold" for="number">Email ID</label>
-            <input type="text" placeholder="Enter Passenger Name:" class="input input-bordered w-full max-w-xs mt-4" />
+            <input type="text" placeholder="Enter Passenger Name:" id="input-name3" class="input input-bordered w-full max-w-xs mt-4" />
           </div>
           <div class="ml-6">
-            <button class="btn bg-[#1DD100] w-full max-w-xs text-xl font-semibold text-white">Next</button>
+            <button id="btn-next" class="btn bg-[#1DD100] w-full max-w-xs text-xl font-semibold text-white">Next</button>
           </div>
           <div class="flex m-8 space-x-8 underline opacity-70">
             <p>Terms and Conditions</p>
@@ -269,7 +269,7 @@
       </section>
   </div> 
   <!-- Another display -->
-  <div class="hidden">
+  <div id="display2" class="hidden">
     <div class="card w-4/6 bg-base-200 shadow-xl mx-auto mt-28 flex flex-col items-center pt-8">
       <img class="w-28" src="images/success.png" alt="">
       <p class="text-lg text-[#1DD100] mt-4 font-semibold">SUCCESS</p>
@@ -277,7 +277,7 @@
         We are working hard to find the best service and deals for you.
       </p>
       <p class="mt-2 opacity-55"> Shortly you will find a confirmation in your mail.</p>
-      <button class="btn w-56 m-6 rounded-3xl bg-green-700">Continue</button>
+      <button id="btn-continue" class="btn w-56 m-6 rounded-3xl bg-green-700">Continue</button>
     </div>
   </div>    
     <script src="index.js"></script>
