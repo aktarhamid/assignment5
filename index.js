@@ -2,6 +2,7 @@
 const allButton =document.getElementsByClassName("add-btn");
  let count = 0;
  let count2 = 0;
+ let count3 = 40;
  
 for(const btn of allButton){
    btn.addEventListener('click', function(e){
@@ -9,6 +10,9 @@ for(const btn of allButton){
 
     count = count + 1;
     count2 = count2 + 550;
+    count3 = count3 - 1;
+    console.log(count3);
+    // document.getElementById("seat-number").innerText=  count3;
     if(count <= 4){
         btn.classList.add('bg-green-400')
         // Append Container.......
@@ -26,8 +30,9 @@ for(const btn of allButton){
         selectedContainer.append(li);
         li.style.flex;
         // Append Container end.....
+ 
 
-
+       setInnerText('seat-number', count3);
        setInnerText('total-price', count2);
        setInnerText('grand-total', count2);
         setInnerText('card-count',count);
@@ -43,3 +48,5 @@ for(const btn of allButton){
   function setInnerText(id,value){
     document.getElementById(id).innerText = value;
   }
+
+
