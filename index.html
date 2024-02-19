@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="">
      <!-- navbar section start here -->
      <section class="container">
         <nav class="max-w-6xl mx-auto my-8">
@@ -225,6 +226,12 @@
                   <p class="font-semibold">Total Price</p>
                  <p class="font-semibold">BDT: <span id="total-price">0</span></p>
                  </div>
+                 <!-- Append discount -->
+                 <div>
+                  <ul id="discounted-price">
+
+                  </ul>
+                 </div>
                  <!-- Cuppon input fild -->
                  <div class="flex space-x-1 mt-4">
                   <input id="cupon-input-fild" type="text" placeholder="Have any copupon?" class="input input-bordered w-full max-w-xs" />
@@ -260,6 +267,19 @@
         </div>
        </div>
       </section>
+  </div> 
+  <!-- Another display -->
+  <div class="hidden">
+    <div class="card w-4/6 bg-base-200 shadow-xl mx-auto mt-28 flex flex-col items-center pt-8">
+      <img class="w-28" src="images/success.png" alt="">
+      <p class="text-lg text-[#1DD100] mt-4 font-semibold">SUCCESS</p>
+      <p class="text-center mt-6 font-semibold">Thank you for Bokking our Bus Seats. <br>
+        We are working hard to find the best service and deals for you.
+      </p>
+      <p class="mt-2 opacity-55"> Shortly you will find a confirmation in your mail.</p>
+      <button class="btn w-56 m-6 rounded-3xl bg-green-700">Continue</button>
+    </div>
+  </div>    
     <script src="index.js"></script>
 </body>
 </html>

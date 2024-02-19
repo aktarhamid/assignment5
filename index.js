@@ -11,7 +11,7 @@ for(const btn of allButton){
     count = count + 1;
     count2 = count2 + 550;
     count3 = count3 - 1;
-    console.log(count3);
+    // console.log(count3);
     // document.getElementById("seat-number").innerText=  count3;
     if(count <= 4){
         btn.classList.add('bg-green-400')
@@ -50,3 +50,39 @@ for(const btn of allButton){
   }
 
 
+ document.getElementById('cupon-input-fild').addEventListener('keyup', function(e){
+     const text = e.target.value;
+     const deletElemnt = document.getElementById('btn-apply');
+    if(text === 'new15'){
+          deletElemnt.removeAttribute('disabled');
+          return;
+    }
+    else  if(text==='couple 20'){
+        deletElemnt.removeAttribute('disabled');
+          return;
+    }
+    else{
+        deletElemnt.setAttribute('disabled',true)
+    }
+ })
+    
+    document.getElementById('btn-apply').addEventListener('click',function(){
+       const discountPrice = document.getElementById('total-price').innerText;
+         const convertedDiscount =  parseInt(discountPrice);
+         const input = document.getElementById('cupon-input-fild').value;
+        //  console.log(input);
+       if( convertedDiscount === 2200 && input === 'new15'){
+        console.log('aktar hossen is a good student');
+       }
+       if( convertedDiscount === 2200 && input === 'couple 20'){
+        console.log('aktar hossen is a good student');
+       }
+
+       else{
+        console.log('aktar hossen is not a good student')
+       }
+       
+    })
+
+    // const input = document.getElementById('cupon-input-fild').value;
+    // console.log(input);
